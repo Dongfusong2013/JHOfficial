@@ -49,13 +49,13 @@ class Content extends React.Component {
     );
   }
 }
-//
+
 // Content.propTypes = {
 //   className: PropTypes.string,
 // };
 //
-// Content.defaultProps = {
-//   className: 'banner0',
-// };
+Content.defaultProps = {
+  className: 'banner0',
+};
 
 export default Content;
