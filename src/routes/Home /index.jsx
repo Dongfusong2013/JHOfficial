@@ -14,7 +14,8 @@ import './less/antMotion_style.less';
 import BigDataView from "./BigDataView";
 import SystemView from "./SystemView";
 import AboutUsView from "./AboutUsView";
-
+import Scroll from '../Scroll';
+import BestCases from './BestCases'
 import linkUrls from '../LinkConfig.js'
 
 let isMobile;
@@ -42,11 +43,13 @@ class HomePage extends React.Component{
       }, 500);
     }
   }
+// <Content0 id="content_0_0" key="content_0_0" isMobile={this.state.isMobile}/>,
   render(){
     const children = [
-      <Content0 id="content_0_0" key="content_0_0" isMobile={this.state.isMobile}/>,
+      <Content0 id="content_1_0" key="content_1_0" isMobile={this.state.isMobile}/>,
       <Content1 id="content_2_0" key="content_2_0" isMobile={this.state.isMobile}/>,
       <Content2 id="content_3_0" key="content_3_0" isMobile={this.state.isMobile}/>,
+      <ResolutionView/>,
       <Content3 id="content_4_0" key="content_4_0" isMobile={this.state.isMobile}/>,
     ];
 
@@ -82,7 +85,7 @@ export default class Home extends React.Component {
     }
   }
   showRoutes(){
-    let components = [BigDataView,ResolutionView,SystemView,AboutUsView];
+    let components = [BigDataView,ResolutionView,BestCases,AboutUsView];
     let array = [];
     for (let i = 0; i < components.length; i++){
         array.push(<Route path={linkUrls[i]} component={components[i]}/>);

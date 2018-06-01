@@ -64,7 +64,7 @@ class Content extends React.Component {
             id={`${props.id}-title`}
             reverseDelay={100}
           >
-             蚂蚁金融云提供专业的服务
+             竞合数据云提供专业的服务
           </TweenOne>
           <TweenOne
             key="p"
@@ -72,7 +72,7 @@ class Content extends React.Component {
             component="p"
             id={`${props.id}-titleContent`}
           >
-            基于阿里云强大的基础资源
+            基于亚马逊云强大的基础资源
           </TweenOne>
           <QueueAnim
             key="ul"
