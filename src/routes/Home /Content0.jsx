@@ -32,7 +32,7 @@ class Content extends React.Component {
             key="content"
             id={`${props.id}-content`}
           >
-            高效的企业大数据解决方案
+            一个高效的页面动画解决方案
           </p>
           <Button type="ghost" key="button" id={`${props.id}-button`}>
             Learn More

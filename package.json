@@ -16,7 +16,8 @@
     "rc-scroll-anim": "^2.5.1",
     "rc-tween-one": "^1.7.8",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router-dom": "latest"
   },
   "devDependencies": {
     "babel-plugin-dva-hmr": "^0.3.2",

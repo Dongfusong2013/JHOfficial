@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
 
+import { Router, Route, Link } from 'react-router-dom';
+
 const Item = Menu.Item;
 
 class Header extends React.Component {
@@ -23,9 +25,10 @@ class Header extends React.Component {
     const props = { ...this.props };
     const isMobile = props.isMobile;
     delete props.isMobile;
-    const navData = { menu1: '大数据应用', menu2: '移动开发', menu3: '企业定制', menu4: '关于' };;
+    const navData = { menu1: '导航一', menu2: '导航二', menu3: '导航三', menu4: '导航四' };
     const navChildren = Object.keys(navData)
-      .map((key, i) => (<Item key={i}>{navData[key]}</Item>));
+      .map((key, i) => (<Item key={i}><Link to="/page1">{navData[key]}</Link></Item>));
+
     return (<TweenOne
       component="header"
       animation={{ opacity: 0, type: 'from' }}
