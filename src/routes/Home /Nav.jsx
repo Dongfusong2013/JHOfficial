@@ -29,7 +29,7 @@ class Header extends React.Component {
     delete props.isMobile;
     const navData = { menu1: '数据服务', menu2: '成功案例', menu3: '舆情系统', menu4: '关于我们' };
     const navChildren = Object.keys(navData)
-      .map((key, i) => (<Item key={i}><Link to={linkUrls[i]}>{navData[key]}</Link></Item>));
+      .map((key, i) => (<Item key={i}><Link to={linkUrls[i]}><div style={{color:'white'}}>{navData[key]}</div></Link></Item>));
 
     return (<TweenOne
       component="header"
