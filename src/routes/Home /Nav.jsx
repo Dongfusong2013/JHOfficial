@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
-
+import linkUrls from '../LinkConfig.js'
 import { Router, Route, Link } from 'react-router-dom';
 
 const Item = Menu.Item;
+
+
 
 class Header extends React.Component {
   constructor(props) {
@@ -25,9 +27,9 @@ class Header extends React.Component {
     const props = { ...this.props };
     const isMobile = props.isMobile;
     delete props.isMobile;
-    const navData = { menu1: '导航一', menu2: '导航二', menu3: '导航三', menu4: '导航四' };
+    const navData = { menu1: '数据服务', menu2: '成功案例', menu3: '舆情系统', menu4: '关于我们' };
     const navChildren = Object.keys(navData)
-      .map((key, i) => (<Item key={i}><Link to="/page1">{navData[key]}</Link></Item>));
+      .map((key, i) => (<Item key={i}><Link to={linkUrls[i]}>{navData[key]}</Link></Item>));
 
     return (<TweenOne
       component="header"
@@ -39,7 +41,10 @@ class Header extends React.Component {
         animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
         id={`${this.props.id}-logo`}
       >
-        <img width="100%" src="https://os.alipayobjects.com/rmsportal/mlcYmsRilwraoAe.svg" />
+        <Link to="/">
+          <img width="100%" src="https://os.alipayobjects.com/rmsportal/mlcYmsRilwraoAe.svg" />
+        </Link>
+
       </TweenOne>
       {isMobile ? (<div
         className={`${this.props.className}-phone-nav${this.state.phoneOpen ? ' open' : ''}`}
